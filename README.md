@@ -7,7 +7,7 @@ Clearvoice is a static, browser-only text-to-speech app using Kokoro-82M through
 Requirements: Node.js 22 LTS (22.12 or newer) and pnpm 10 or newer.
 
 ```powershell
-cd "C:\Users\noore\Documents\Codex\2026-10-26\x20-ai-text-to-speech-web\outputs\clearvoice-browser-release"
+cd clearvoice-tts
 corepack enable
 pnpm install
 pnpm dev
@@ -59,5 +59,6 @@ Clearvoice is independent and not affiliated with the Kokoro model authors or Hu
 The Clearvoice application source in this repository is licensed under the MIT License. When you redistribute the source or substantial portions of it, include the copyright and permission notice from `LICENSE`. MIT does not require a visible credit inside a reused product; a visible credit is appreciated. Suggested credit: “Clearvoice by Noor E Sabab” with a link to this repository.
 
 The Clearvoice name and logo identify this project. The source-code license does not imply endorsement by Clearvoice or grant trademark rights. Kokoro and other bundled dependencies have their own licenses; keep the third-party notices with redistributions and review them for your use.
+
 The start, build, and preview scripts copy the two ONNX Runtime Web files from the locked npm dependency into public/ort before running Vite. Those generated runtime files are intentionally excluded from Git; this keeps the repository smaller while preserving the same deployable build.
 
