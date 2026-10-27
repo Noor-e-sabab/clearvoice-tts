@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" role="img" aria-labelledby="title desc">
+  <title id="title">Clearvoice</title>
+  <desc id="desc">A white audio waveform inside a dark rounded square, followed by the Clearvoice wordmark.</desc>
+  <rect x="2" y="2" width="76" height="76" rx="22" fill="#111111" stroke="#777777" stroke-width="2"/>
+  <path d="M14 41h9l5-14 9 29 9-39 9 39 7-21 5 6h6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="52" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="2">CLEARVOICE</text>
+</svg>
+

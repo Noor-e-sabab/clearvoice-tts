@@ -1,0 +1,19 @@
+{
+  "name": "clearvoice-browser-release",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/copy-onnx-runtime.mjs && vite --host 127.0.0.1",
+    "build": "node scripts/copy-onnx-runtime.mjs && vite build",
+    "preview": "node scripts/copy-onnx-runtime.mjs && vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1",
+    "kokoro-js": "1.2.1"
+  },
+  "devDependencies": {
+    "vite": "8.3.5"
+  }
+}
+

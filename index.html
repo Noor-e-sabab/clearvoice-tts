@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050507">
+  <meta name="description" content="Turn written words into clear synthetic speech on your device with Clearvoice.">
+  <title>Clearvoice · AI Text to Speech</title>
+  <link rel="icon" href="./clearvoice-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="masthead">
+      <a class="brand" href="#top" aria-label="Clearvoice home"><img src="./clearvoice-logo.svg" alt=""></a>
+      <nav aria-label="Main navigation"><a href="#studio">Studio</a><a href="#about">About</a><span>Kokoro · 28 English presets</span></nav>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow">Text to speech studio</div>
+        <h1>Give your words<br><span>a voice.</span></h1>
+        <p>Turn a thought, a story, or a lesson into clear synthetic speech. Choose a preset, set the pace, and listen.</p>
+        <a class="hero-link" href="#studio">Start creating <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="studio" id="studio" aria-labelledby="studio-title">
+        <div class="section-heading">
+          <div class="eyebrow">The studio</div>
+          <h2 id="studio-title">Make something <span>sound good.</span></h2>
+          <p>Generate speech on this device. Your text is not sent to a Clearvoice server. First use downloads about 92 MB of model weights plus supporting files.</p>
+        </div>
+        <div class="editor-grid">
+          <div class="field text-field">
+            <label for="script">Text to speak</label>
+            <textarea id="script" maxlength="1500" rows="9" placeholder="Type or paste your script here…" aria-describedby="character-count" autocomplete="off"></textarea>
+            <div class="character-count" id="character-count" aria-live="polite">0 / 1,500 characters</div>
+          </div>
+          <div class="voice-fields">
+            <div class="field">
+              <label for="voice">Choose a preset voice</label>
+              <select id="voice" required></select>
+            </div>
+            <div class="field speed-field">
+              <div class="label-row"><label for="speed">Speaking pace</label><output id="speed-value" for="speed">1.00×</output></div>
+              <p class="hint">0.8 slower · 1.0 natural · 1.2 faster</p>
+              <div class="range-row"><span>0.8</span><input id="speed" type="range" min="0.8" max="1.2" step="0.05" value="1"><span>1.2</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="consent-card">
+          <label class="consent-label" for="consent"><input id="consent" type="checkbox"><span>I will use generated speech responsibly and disclose synthetic audio where required.</span></label>
+          <p>Check this before generating speech.</p>
+        </div>
+        <button class="generate-button" id="generate" type="button">Generate speech <span aria-hidden="true">→</span></button>
+
+        <section class="audio-section" aria-labelledby="audio-title">
+          <h3 id="audio-title">Generated audio</h3>
+          <div class="status" id="status" role="status" aria-live="polite">Your audio will appear here after generation. First use downloads about 92 MB of model weights plus supporting files; keep this page open on a steady connection.</div>
+          <progress id="bar" max="100" value="0" aria-label="Speech model download progress" hidden></progress>
+          <audio id="audio" controls preload="none" hidden></audio>
+          <a id="download" class="download-link" hidden download="clearvoice.wav">Download audio</a>
+        </section>
+        <p class="responsible-note">AI-generated speech can be mistaken for real audio. Do not use it to impersonate people or mislead listeners.</p>
+      </section>
+
+      <section class="about" id="about">
+        <div class="eyebrow">About Clearvoice</div>
+        <h2>Speech, made simple.</h2>
+        <p>Clearvoice turns written words into listenable audio with the open-weight Kokoro model and preset voices. Voice labels describe documented accent and vocal traits; they do not verify age or identity.</p>
+        <div class="info-grid">
+          <article><h3>How to use it</h3><p>Enter up to 1,500 characters, choose a preset and pace, confirm responsible use, then select Generate speech. Listen or download the result.</p></article>
+          <article><h3>Privacy in brief</h3><p>Speech generation runs on this device. Model and app files are downloaded from their providers; network providers receive ordinary connection metadata.</p></article>
+          <article><h3>Responsible use</h3><p>Do not impersonate someone or use generated audio to mislead, harass, or defraud. Follow applicable disclosure rules.</p></article>
+        </div>
+      </section>
+
+      <section class="details-section" aria-labelledby="details-title">
+        <h2 id="details-title">Help, privacy &amp; use</h2>
+        <details><summary>Contact and feedback</summary><p>For questions, accessibility feedback, or to report a problem, email <a href="mailto:clearvoice.tts@gmail.com">clearvoice.tts@gmail.com</a>. Please do not include private text or generated audio unless it is necessary to explain the issue.</p></details>
+        <details><summary>How this app handles your text and audio</summary><p>The app generates speech in the browser and does not send your text or audio to a Clearvoice server. The speech model is downloaded from Hugging Face and cached in your browser. Your browser makes model-file requests to Hugging Face; your network provider and hosting provider can see ordinary connection metadata. Browser storage may be cleared or evicted at any time.</p></details>
+        <details><summary>Acceptable use</summary><p>Do not use this app for impersonation, fraud, harassment, deceptive endorsements, or other harmful synthetic audio. Respect people's rights and the disclosure rules that apply to your platform and location. This reminder is not technical enforcement.</p></details>
+        <details><summary>About the speech model and limitations</summary><p>Clearvoice is an independent interface and is not affiliated with the Kokoro model authors. Speech is AI-generated and may mispronounce words. Preset voices are not voice cloning or verified representations of real people. The first model download is about 92 MB plus supporting files and requires internet access; the browser may cache them afterwards. Performance depends on the visitor's browser, device, memory, and processor.</p></details>
+      </section>
+    </main>
+    <footer>Clearvoice · A privacy-conscious text-to-speech studio. Built with Kokoro in your browser. Audio is synthetic—disclose it where required. · <a href="mailto:clearvoice.tts@gmail.com">Contact</a> · <a href="./privacy.html">Privacy</a> · <a href="./acceptable-use.html">Acceptable use</a> · <a href="./notices.html">Notices</a></footer>
+  </div>
+</body>
+</html>
+
+

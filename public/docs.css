@@ -1,0 +1,2 @@
+*{box-sizing:border-box}html{background:#050507;color-scheme:dark}body{margin:0;background:#050507;color:#f6f3fb;font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}.eyebrow{margin-top:40px;color:#bd91ff;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}main{width:min(760px,100% - 32px);margin:0 auto;padding:24px 0 64px}h1{margin:.4em 0;font-size:clamp(2rem,7vw,3.5rem);line-height:1.05;letter-spacing:-.05em}p,li{color:#c5c0cc}a{color:#d9c2ff}li{margin:.7em 0}code{overflow-wrap:anywhere}
+
